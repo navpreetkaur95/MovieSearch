@@ -1,0 +1,37 @@
+﻿@page
+@model ResultModel
+@{
+    ViewData["Title"] = @Model.Title;
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+
+<img src=@Model.posterURL alt=@Model.Title style="width:25%;float:left" />
+
+<table border="0" cellpadding="0" cellspacing="0" style="width:60%;float:right">
+        <tr>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Release Date</th>
+            <th>Language</th>
+        </tr>
+        <tr>
+            <td>@Model.Title</td>
+            <td>@Model.Rating/10</td>
+            <td>@Model.releaseDate</td>
+            <td>@Model.Language</td>
+        </tr>
+</table>
+
+
+<table border="0" cellpadding="0" cellspacing="0" style="width:60%;float:right">
+    <tr>
+        <th>Overview</th>
+    </tr>
+    <tr>
+        <td>@Model.Overview</td>
+    </tr>
+</table>
+
+<br />
